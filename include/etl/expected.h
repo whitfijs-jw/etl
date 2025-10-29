@@ -1181,6 +1181,40 @@ namespace etl
     ETL_NODISCARD
     ETL_CONSTEXPR14
     ETL_EXPLICIT
+    /**
+     * Check whether this expected currently contains a value.
+     * @return `true` if a value is present, `false` otherwise.
+     */
+    
+    /**
+     * Access the stored error value.
+     * @return A reference to the contained error. Undefined behavior if no error is present.
+     */
+    
+    /**
+     * Access the stored error value as a const reference.
+     * @return A const reference to the contained error. Undefined behavior if no error is present.
+     */
+    
+    /**
+     * Access the stored error value by rvalue reference.
+     * @return An rvalue reference to the contained error. Undefined behavior if no error is present.
+     */
+    
+    /**
+     * Access the stored error value by const rvalue reference.
+     * @return A const rvalue reference to the contained error. Undefined behavior if no error is present.
+     */
+    
+    /**
+     * Access the stored error value (C++98 fallback).
+     * @return A const reference to the contained error. Undefined behavior if no error is present.
+     */
+    
+    /**
+     * Exchange the contents of this expected with another.
+     * @param other The expected to swap contents with.
+     */
     operator bool() const ETL_NOEXCEPT
     {
       return has_value();

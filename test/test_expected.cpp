@@ -137,6 +137,16 @@ namespace
 
 namespace
 {
+  /**
+   * @brief Unit test suite exercising etl::expected and etl::unexpected behaviour.
+   *
+   * @details Verifies construction, assignment, copy/move semantics, emplacement, dereference
+   * behaviour, comparisons, swapping, and value/error propagation for both value-bearing and
+   * void-valued expected specializations. Also tests functional combinators and transformations:
+   * value_or, or_else (including error-type changes and move/const variants), transform,
+   * and_then, and transform_error. Includes type-check helpers to validate resulting value and
+   * error types in transformed or chained operations.
+   */
   SUITE(test_expected)
   {
     //*************************************************************************
